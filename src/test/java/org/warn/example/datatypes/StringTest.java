@@ -21,4 +21,10 @@ public class StringTest {
 		String s2 = ""+ i++;
 		System.out.println(i + " " + s2);
 	}
+	
+	@Test
+	public void testStrFormatWithNull() {
+		String s = null;
+		System.out.println( String.format("Value - %s", s) );
+	}
 }
