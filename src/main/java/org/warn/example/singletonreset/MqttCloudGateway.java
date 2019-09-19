@@ -20,6 +20,8 @@ public class MqttCloudGateway {
 		//System.out.println("MqttCloudGateway - invoked by - " + callerId );
 	}
 
+	// This could potentially break the singleton pattern since resetting this reference in a multi-threaded environment 
+	// can lead to multiple MqttCloudGateway objects, which are referenced by different BatchGateway instances.
 	public static void reset() {
 		System.out.println("MqttCloudGateway - resetting singleton..");
 		singleton = null;
