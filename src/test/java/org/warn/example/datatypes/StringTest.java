@@ -27,4 +27,12 @@ public class StringTest {
 		String s = null;
 		System.out.println( String.format("Value - %s", s) );
 	}
+
+	@Test
+	public void testStringBuilderInsert() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("ab");
+		sb.insert(1, ".");
+		System.out.println(sb.toString());
+	}
 }

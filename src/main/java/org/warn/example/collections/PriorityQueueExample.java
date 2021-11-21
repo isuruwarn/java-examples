@@ -15,6 +15,10 @@ public class PriorityQueueExample {
                     }
                 }
         );
+        //PriorityQueue<String> pq = new PriorityQueue<>( (s1,s2) -> s1.compareTo(s2) ); // short syntax
+        //PriorityQueue<String> pq = new PriorityQueue<>( Comparator.naturalOrder() ); // shorter syntax
+        //PriorityQueue<String> pq = new PriorityQueue<>( String::compareTo ); // even shorter syntax
+
         pq.add("bat");
         pq.add("cat");
         pq.add("apple");
@@ -26,14 +30,8 @@ public class PriorityQueueExample {
         PriorityQueue<Integer> pq2 = new PriorityQueue<>(
                 new Comparator<Integer>() {
                     @Override
-                    public int compare(Integer i, Integer j) {
-                        //System.out.println("i=" + i + ", j=" + j );
-                        //return i - j;
-                        if( i < j )
-                            return -1;
-                        else if( i > j )
-                            return 1;
-                        return 0;
+                    public int compare(Integer n1, Integer n2) {
+                        return n1 - n2;
                     }
                 }
         );
