@@ -1,4 +1,4 @@
-package org.warn.example.queues;
+package org.warn.example.collections;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;
